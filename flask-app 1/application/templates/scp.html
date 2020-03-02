@@ -1,11 +1,8 @@
-{%extends "template.html"%}
-{%block extra%}
- <div class='forms'>
-  <form method='POST' action=''>
-   <p>
-    item #: {{number}}
-    class: {{objectclass}}
-   </p>
-  </form>
- </div>
+{%extends "template.html" %}
+{% block extra %}
+ <h3>SCP Generator</h3>
+ <p>
+  item #: {{number}}
+  class: {{objectclass}}
+ </p>
 {%endblock%}
