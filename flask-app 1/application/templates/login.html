@@ -1,0 +1,26 @@
+{%extends "template.html"%}
+{%block extra%}
+<h3>Login</h3>
+ <p>Don't have an account? Too bad</p>
+  <div class='form'>
+   <form method='POST' action=''>
+    {{form.hidden_tag()}}
+     <div class='form_group'>
+      {{form.username.label}}
+      {{form.username}}
+       {%if form.username.errors%}
+        <div class='error'>
+         {%for error in form.username.errors%}
+          <span>{{error}}</span>
+         {%endfor%}
+        </div>
+       {%endif%}<br>
+      {{form.password.label}}
+      {{form.password}}<br>
+      </div>
+     <div class='form_group'>
+    {{form.submit}}
+   </div>
+  </form>
+ </div>
+{%endblock%}
