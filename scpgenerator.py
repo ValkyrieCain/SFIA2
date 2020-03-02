@@ -31,7 +31,7 @@ euclidnounlist=["human of █████ descent", "███████", "se
 enl=sample(euclidnounlist, 1)
 keternounlist=["pond", "building built in 19██", "nuclear bomb", "train", "████████"]
 knl=sample(keternounlist, 1)
-anomalycategorylist=["a memetic", "an antimemetic", "an autonomous"]
+anomalycategorylist=["a memetic", "an antimemetic", "an autonomous" "an infohazardous"]
 acl=sample(anomalycategorylist, 1)
 if oc=="s":
 	print("Item #: SCP-"+scpno)
