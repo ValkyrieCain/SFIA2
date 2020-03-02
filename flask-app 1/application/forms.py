@@ -3,6 +3,10 @@ from wtforms import IntegerField,StringField,SubmitField,PasswordField,BooleanFi
 from wtforms.validators import DataRequired,Length,EqualTo,ValidationError
 from application.models import Users, Superheroes
 
+class Objectclass(FlaskForm):
+	objectclass=StringField(validators=[DataRequired(),Length(min=4,max=6)])
+	submit=SubmitField('Generate SCP')
+
 class Hero(FlaskForm):
 	publisher=StringField(validators=[DataRequired(),Length(max=30)])
 	name=StringField(validators=[DataRequired(),Length(max=30)])
