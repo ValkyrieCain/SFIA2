@@ -1,0 +1,3 @@
+8e43e271be554426a77e7881c402d3c6
+stty rows 50 cols 132
+resize 50 50 (session based)
