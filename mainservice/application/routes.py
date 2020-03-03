@@ -8,7 +8,7 @@ from requests import *
 @app.route('/home')
 def home():
 	#response = get('http://sfia2_flask2_1:5000/no')
-	print(response.text)
+	#print(response.text)
 	#if objectclass.validate_on_submit():
 		#return redirect(url_for('scp'))
 	return render_template("xx.html")#, response=response)
