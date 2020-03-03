@@ -1,5 +1,5 @@
 from flask import render_template, redirect, url_for, request, flash
-from application import app, db
+from application import app
 #from application.models import Superheroes, Users, Powers
 from application.forms import Objectclass#, Hero, Search, Register, Login, Delete, Alterego, Alteregocreate, Dontdelete, Multidelete
 import time
