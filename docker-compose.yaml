@@ -4,9 +4,9 @@ services:
   build: ./mainservice
   ports:
   - target: 5000
-  published: 5000
+    published: 5000
  flask2:
   build: ./numbergenerator
   ports:
   - target: 5000
-  published: 5001
+    published: 5001
