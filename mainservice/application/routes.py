@@ -13,7 +13,7 @@ def home():
 	if objectclass.validate_on_submit():
 		x=1
 		#return redirect(url_for('scp'))
-	return render_template("home.html")
+	return render_template("xx.html", response=response)
 @app.route('/scp', methods=['GET','POST'])
 def scp():
 	return render_template("scp.html", objectclass=objectclass)
