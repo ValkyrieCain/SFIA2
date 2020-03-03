@@ -7,10 +7,10 @@ def no():
 	return str(randint(1,10000))
 @app.route('/site')
 def site():
-	return randint(1,200)
+	return str(randint(1,200))
 @app.route('/container')
 def container():
-	return randint(1,20)
+	return str(randint(1,20))
 @app.route('/locker')
 def locker():
-	return randint(1,200)
+	return str(randint(1,200))
