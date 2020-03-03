@@ -9,7 +9,7 @@ from requests import *
 def home():
 	x=1
 	response = get('http://numbergenerator_flask1:5000/no')
-	print(response)
+	print(response.text)
 	if objectclass.validate_on_submit():
 		x=1
 		#return redirect(url_for('scp'))

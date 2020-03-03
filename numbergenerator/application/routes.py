@@ -4,7 +4,7 @@ from random import *
 import time
 @app.route('/no')
 def no():
-	return randint(1,10000)
+	return str(randint(1,10000))
 @app.route('/site')
 def site():
 	return randint(1,200)
