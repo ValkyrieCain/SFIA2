@@ -8,7 +8,7 @@ from requests import *
 @app.route('/home')
 def home():
 	x=1
-	response = get('http://sfia22424lask2_1:5000/no')
+	response = get('http://sfia2_flask2_1:5000/no')
 	print(response.text)
 	if objectclass.validate_on_submit():
 		x=1
