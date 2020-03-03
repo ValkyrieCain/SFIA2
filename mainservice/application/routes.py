@@ -7,11 +7,11 @@ from requests import *
 @app.route('/')
 @app.route('/home')
 def home():
-	response = get('http://sfia2_flask2_1:5000/no')
+	#response = get('http://sfia2_flask2_1:5000/no')
 	print(response.text)
 	#if objectclass.validate_on_submit():
 		#return redirect(url_for('scp'))
-	return render_template("xx.html", response=response)
+	return render_template("xx.html")#, response=response)
 #@app.route('/scp', methods=['GET','POST'])
 #def scp():
 #	return render_template("scp.html", objectclass=objectclass)
