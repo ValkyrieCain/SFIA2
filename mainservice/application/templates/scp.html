@@ -2,10 +2,10 @@
 {%block extra%}
  <h3>SCP Generator</h3>
  <p>
-  item #: {{no.text}}<br>
-  class: {{oc}}<br>
-  stored in locker# {{locker.text}}<br>
+  <b>Item #:</b> SCP-{{no.text}}<br>
+  <b>Object Class:</b> {{oc}}<br>
+  <b>Special Containment Procedures:</b> {{scp}} is stored in locker #{{locker.text}}<br>
   containment chamber {{container.text}}<br>
-  site {{site.text}}
+  Site {{site.text}}
  </p>
 {%endblock%}

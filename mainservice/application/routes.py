@@ -9,11 +9,12 @@ from requests import *
 def home():
 	objectclass=Objectclass()
 	oc=""
+	no=get('http://sfia2_flask2_1:5000/no')
+	site=get('http://sfia2_flask2_1:5000/site')
+	container=get('http://sfia2_flask2_1:5000/container')
+	locker=get('http://sfia2_flask2_1:5000/locker')
+	scp="SCP-"+str(no.text)
 	if objectclass.validate_on_submit():
-		no=get('http://sfia2_flask2_1:5000/no')
-		site=get('http://sfia2_flask2_1:5000/site')
-		container=get('http://sfia2_flask2_1:5000/container')
-		locker=get('http://sfia2_flask2_1:5000/locker')
 		if objectclass.objectclass.data.lower()=="safe":
 			oc="Safe"
 		if objectclass.objectclass.data.lower()=="euclid":
@@ -22,7 +23,7 @@ def home():
 			oc="Keter"
 		if objectclass.objectclass.data.lower()=="test":
 			oc="Thaumiel"
-		return render_template("scp.html",oc=oc,no=no,site=site,container=container,locker=locker)
+		return render_template("scp.html",oc=oc,scp=scp,site=site,container=container,locker=locker)
 
 	return render_template("home.html", objectclass=objectclass)
 
