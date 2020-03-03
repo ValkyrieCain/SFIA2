@@ -1,12 +1,12 @@
 version: "3.7"
 services:
- flask-app:
-  build: ./flask-app
-   ports:
+ flask1:
+  build: ./mainservice
+  ports:
    - target: 5000
-    published: 5000
-  flask-app-service2:
-  build: ./flask-app-service2
-   ports:
+   published: 5000
+ flask2:
+  build: ./numbergenerator
+  ports:
    - target: 5000
-    published: 5001
+   published: 5001
