@@ -5,7 +5,7 @@ from application.forms import Objectclass
 import time
 from requests import *
 @app.route('/', methods=['GET','POST'])
-@app.route('/home')
+@app.route('/home', methods=['GET','POST'])
 def home():
 	objectclass=Objectclass()
 	oc=""
