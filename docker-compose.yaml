@@ -15,13 +15,13 @@ services:
   ports:
   - target: 5000
     published: 5002
-# euclid:
-#  build: ./euclidgenerator
-#  ports:
-#  - target: 5000
-#    published: 5003
-# keter:
-#  build: ./ketergenerator
-#  ports:
-#  - target: 5000
-#    published: 5004
+ euclid:
+  build: ./euclidgenerator
+  ports:
+  - target: 5000
+    published: 5003
+ keter:
+  build: ./ketergenerator
+  ports:
+  - target: 5000
+    published: 5004
