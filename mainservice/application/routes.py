@@ -18,9 +18,6 @@ def home():
 	locker=lockerget.text
 	redacted=get('http://sfia2_number_1:5000/redacted')
 	if objectclass.validate_on_submit():
-		#occ=objectclass.objectclass.data.lower()
-		#containerget=post('http://sfia2_number_1:5000/container',data=occ)
-		#container=containerget.text
 		if objectclass.objectclass.data.lower()=="safe":
 			if str(redacted.text)=="1":
 				oc="Safe"
@@ -34,7 +31,7 @@ def home():
 				category=scategory.text
 				sanomaly=get('http://sfia2_safe_1:5000/sanomaly')
 				anomaly=sanomaly.text
-				return render_template("safe.html",scp=scp,site=site,adjective=adjective,noun=noun,category=category,anomaly=anomaly,locker=locker)#,container=container)
+				return render_template("safe.html",scp=scp,site=site,adjective=adjective,noun=noun,category=category,anomaly=anomaly,locker=locker)
 		if objectclass.objectclass.data.lower()=="euclid":
 			if str(redacted.text)=="1":
 				oc="Euclid"
@@ -67,5 +64,8 @@ def home():
 				return render_template("keter.html",scp=scp,site=site,location=location,adjective=adjective,noun=noun,category=category,anomaly=anomaly)
 		if objectclass.objectclass.data.lower()=="test":
 			oc="Thaumiel"
-			return render_template("scp.html",oc=oc,scp=scp,site=site,container=container,locker=locker)
+			occ=objectclass.objectclass.data.lower()
+			containerget=post('http://sfia2_thaumiel_1:5000/thcontain',data=occ)
+			contain=containerget.text
+			return render_template("thaumiel.html",oc=oc,scp=scp,site=site,contain=contain,locker=locker)
 	return render_template("home.html", objectclass=objectclass)

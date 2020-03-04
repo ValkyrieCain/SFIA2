@@ -1,0 +1,10 @@
+{%extends "template.html"%}
+{%block extra%}
+ <h3>SCP Generator</h3>
+ <p>
+  <b>Item #:</b> {{scp}}<br>
+  <b>Object Class:</b> {{oc}}<br>
+  <b>Special Containment Procedures:</b> {{scp}} is stored at Site {{site}}. {{scp}} is {{contain}}% contained.<br>
+  <b>Description:</b> {{scp}} is not anomalous.
+ </p>
+{%endblock%}

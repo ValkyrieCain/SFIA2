@@ -10,12 +10,6 @@ def site():
 @app.route('/container')
 def container():
 	return str(randint(1,20))
-#	if data=="safe":
-#		return str(randint(1,200))
-#	if data=="euclid":
-#		return str(randint(1,20))
-#	else:
-#		return "0"
 @app.route('/locker')
 def locker():
 	return str(randint(1,200))
