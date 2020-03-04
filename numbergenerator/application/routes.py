@@ -9,11 +9,12 @@ def no():
 def site():
 	return str(randint(1,200))
 @app.route('/container')
-def container(data):
+def container():
+	return str(randint(1,20))
 #	if data=="safe":
 #		return str(randint(1,200))
 #	if data=="euclid":
-	return str(randint(1,20))
+#		return str(randint(1,20))
 #	else:
 #		return "0"
 @app.route('/locker')
