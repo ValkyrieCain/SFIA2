@@ -22,4 +22,4 @@ def locker():
 	return str(randint(1,200))
 @app.route('/redacted')
 def redacted():
-	return str(randint(1,150))
+	return str(randint(1,100))

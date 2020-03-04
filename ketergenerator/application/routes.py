@@ -8,7 +8,7 @@ def location():
 	return choice[0]
 @app.route('/kadjective')
 def kadjective():
-	adjective=["a 400 meters long", "a bright white"]
+	adjective=["a 400 meter long", "a bright white"]
 	choice=sample(adjective,1)
 	return choice[0]
 @app.route('/knoun')
@@ -23,6 +23,6 @@ def kcategory():
 	return choice[0]
 @app.route('/kanomaly')
 def kanomaly():
-	anomaly=["being fucked up", "███████"]
+	anomaly=["being weird", "███████"]
 	choice=sample(anomaly,1)
 	return choice[0]

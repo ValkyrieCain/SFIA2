@@ -18,6 +18,6 @@ def scategory():
 	return choice[0]
 @app.route('/sanomaly')
 def sanomaly():
-	anomaly=["being fucked up", "███████"]
+	anomaly=["being weird", "███████"]
 	choice=sample(anomaly,1)
 	return choice[0]
