@@ -10,11 +10,11 @@ services:
   ports:
   - target: 5000
     published: 5001
-# safe:
-#  build: ./safegenerator
-#  ports:
-#  - target: 5000
-#    published: 5002
+ safe:
+  build: ./safegenerator
+  ports:
+  - target: 5000
+    published: 5002
 # euclid:
 #  build: ./euclidgenerator
 #  ports:
