@@ -21,14 +21,14 @@ def home():
 			snoun=get('http://sfia2_safe_1:5000/snoun')
 			sanomaly=get('http://sfia2_safe_1:5000/sanomaly')
 			print(111)
-			#print(sadjective.text)
+			print(sadjective.text)
 			#print(222)
 			#print(sadjective.text[0])
 			#print(333)
 			#print(sadjective[1])
-			print(444)
+			#print(444)
 			#print(sadjective[0])
-			#return render_template("safe.html",oc=oc,scp=scp,site=site,locker=locker,sadjective=sadjective,snoun=snoun,sanomaly=sanomaly)
+			return render_template("safe.html",oc=oc,scp=scp,site=site,locker=locker,sadjective=sadjective,snoun=snoun,sanomaly=sanomaly)
 		if objectclass.objectclass.data.lower()=="euclid":
 			oc="Euclid"
 			#eadjective=get('http://sfia2_euclid_1:5000/eadjective')

@@ -5,8 +5,8 @@ resize 50 50 (session based)
 docker run -d -p 5000:5000 flaskapp:latest
 docker-compose logs main
 
-pr() { docker-compose down; git pull; docker-compose up -d; }
+pr() { docker-compose down; docker rm $(docker ps -qa); docker rmi sfia2_main; docker rmi sfia2_number; docker rmi sfia2_safe; git pull; docker-compose up -d; }
 
-prt() { docker-compose down; git pull; docker-compose up; }
+prt() { docker-compose down; docker rm $(docker ps -qa); docker rmi sfia2_main; docker rmi sfia2_number; docker rmi sfia2_safe; git pull; docker-compose up; }
 
 sd() { docker-compose down; docker rm $(docker ps -qa); docker rmi sfia2_main; docker rmi sfia2_number; docker rmi sfia2_safe; }
