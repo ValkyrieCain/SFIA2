@@ -17,10 +17,10 @@ def home():
 	if objectclass.validate_on_submit():
 		if objectclass.objectclass.data.lower()=="safe":
 			oc="Safe"
-			#sadjective=get('http://sfia2_safe_1:5000/sadjective')
-			#snoun=get('http://sfia2_safe_1:5000/snoun')
-			#sanomaly=get('http://sfia2_safe_1:5000/sanomaly')
-			#return render_template("safe.html",oc=oc,scp=scp,site=site,locker=locker,sadjective=sadjective,snoun=snoun,sanomaly=sanomaly)
+			sadjective=get('http://sfia2_safe_1:5000/sadjective')
+			snoun=get('http://sfia2_safe_1:5000/snoun')
+			sanomaly=get('http://sfia2_safe_1:5000/sanomaly')
+			return render_template("safe.html",oc=oc,scp=scp,site=site,locker=locker,sadjective=sadjective,snoun=snoun,sanomaly=sanomaly)
 		if objectclass.objectclass.data.lower()=="euclid":
 			oc="Euclid"
 			#eadjective=get('http://sfia2_euclid_1:5000/eadjective')
