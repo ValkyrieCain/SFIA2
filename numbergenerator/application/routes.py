@@ -1,7 +1,6 @@
 from flask import render_template, redirect, url_for, request, flash
 from application import app
 from random import *
-from requests import *
 @app.route('/no')
 def no():
 	return str(randint(5000,10000))
