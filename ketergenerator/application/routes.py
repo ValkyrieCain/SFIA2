@@ -4,13 +4,26 @@ from random import *
 import time
 @app.route('/location')
 def location():
-	return sample(list/array/csv)
+	location=["Texas","England","Siberia","France","Maine","Germany","Italy","Morocco","Cuba","Antarctica","Sierra Lione","South Africa","Australia","[REDACTED]","█████████"]
+	choice=sample(location,1)
+	return choice[0]
 @app.route('/kadjective')
 def kadjective():
-	return randint(1,200)
+	adjective=["a 400 meters long", "a bright white"]
+	choice=sample(adjective,1)
+	return choice[0]
 @app.route('/knoun')
 def knoun():
-	return randint(1,20)
+	noun=["pond", "building built in 19██", "nuclear bomb", "train", "████████"]
+	choice=sample(noun,1)
+	return choice[0]
+@app.route('/kcategory')
+def kcategory():
+	category=["a weird", "a mad crazy"]
+	choice=sample(category,1)
+	return choice[0]
 @app.route('/kanomaly')
 def kanomaly():
-	return randint(1,200)
+	anomaly=["being fucked up", "███████"]
+	choice=sample(anomaly,1)
+	return choice[0]
