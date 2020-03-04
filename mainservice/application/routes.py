@@ -18,8 +18,8 @@ def home():
 	#locker=lockerget.text
 	redacted=get('http://sfia2_number_1:5000/redacted')
 	if objectclass.validate_on_submit():
-		o=objectclass.objectclass.data.lower()
-		containerget=post('http://sfia2_number_1:5000/container',o)
+		occ=objectclass.objectclass.data.lower()
+		containerget=post('http://sfia2_number_1:5000/container',data=occ)
 		container=containerget.text
 		if objectclass.objectclass.data.lower()=="safe":
 			if str(redacted.text)=="1":
