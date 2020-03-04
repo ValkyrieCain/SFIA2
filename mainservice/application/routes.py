@@ -12,12 +12,15 @@ def home():
 	scp="SCP-"+str(no.text)
 	siteget=get('http://sfia2_number_1:5000/site')
 	site=siteget.text
-	containerget=get('http://sfia2_number_1:5000/container')
-	container=containerget.text
-	lockerget=get('http://sfia2_number_1:5000/locker')
-	locker=lockerget.text
+	#containerget=get('http://sfia2_number_1:5000/container')
+	#container=containerget.text
+	#lockerget=get('http://sfia2_number_1:5000/locker')
+	#locker=lockerget.text
 	redacted=get('http://sfia2_number_1:5000/redacted')
 	if objectclass.validate_on_submit():
+		o=objectclass.objectclass.data.lower()
+		containerget=post('http://sfia2_number_1:5000/container',o)
+		container=containerget.text
 		if objectclass.objectclass.data.lower()=="safe":
 			if str(redacted.text)=="1":
 				oc="Safe"

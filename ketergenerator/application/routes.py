@@ -1,7 +1,6 @@
 from flask import render_template, redirect, url_for, request, flash
 from application import app
 from random import *
-import time
 @app.route('/location')
 def location():
 	location=["Texas","England","Siberia","France","Maine","Germany","Italy","Morocco","Cuba","Antarctica","Sierra Lione","South Africa","Australia","[REDACTED]","█████████"]

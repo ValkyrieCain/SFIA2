@@ -1,7 +1,6 @@
 from flask import render_template, redirect, url_for, request, flash
 from application import app
 from random import *
-import time
 @app.route('/eadjective')
 def eadjective():
 	adjective=["a 1.5 meter tall", "a round", "a carnivorous"]
