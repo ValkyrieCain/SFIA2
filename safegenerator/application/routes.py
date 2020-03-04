@@ -3,7 +3,7 @@ from application import app
 from random import *
 @app.route('/sadjective')
 def sadjective():
-	adjective=["a green", "a round", "a metallic", "a black", "a small", "a circular", "a white"]
+	adjective=["a green","a round","a metallic","a black","a small","a circular","a white","a flat","a spherical","a translucent"]
 	choice=sample(adjective,1)
 	return choice[0]
 @app.route('/snoun')
