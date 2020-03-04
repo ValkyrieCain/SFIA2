@@ -25,3 +25,8 @@ services:
   ports:
   - target: 5000
     published: 5004
+ thaumiel:
+  build: ./thaumielgenerator
+  ports:
+  - target: 5000
+    published: 5005
