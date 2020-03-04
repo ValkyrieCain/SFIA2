@@ -5,12 +5,10 @@ from requests import *
 import time
 @app.route('/no')
 def no():
-	return str(randint(1,10000))
+	return str(randint(5000,10000))
 @app.route('/site')
 def site():
-	site=str(randint(1,200))
-	s=post('http://sfia2_main:5000/home')
-	return s
+	return str(randint(1,200))
 @app.route('/container')
 def container():
 	return str(randint(1,20))
