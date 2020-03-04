@@ -1,12 +1,27 @@
 version: "3.7"
 services:
- flask1:
+ main:
   build: ./mainservice
   ports:
   - target: 5000
     published: 5000
- flask2:
+ number:
   build: ./numbergenerator
   ports:
   - target: 5000
     published: 5001
+ safe:
+  build: ./safegenerator
+  ports:
+  - target: 5000
+    published: 5002
+# euclid:
+#  build: ./euclidgenerator
+#  ports:
+#  - target: 5000
+#    published: 5003
+# keter:
+#  build: ./ketergenerator
+#  ports:
+#  - target: 5000
+#    published: 5004

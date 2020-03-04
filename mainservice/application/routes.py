@@ -1,6 +1,6 @@
 from flask import render_template, redirect, url_for, request, flash
 from application import app
-#from application.models import Superheroes, Users, Powers
+#from application.models import
 from application.forms import Objectclass
 import time
 from requests import *
@@ -9,25 +9,33 @@ from requests import *
 def home():
 	objectclass=Objectclass()
 	oc=""
-	no=get('http://sfia2_flask2_1:5000/no')
-	site=get('http://sfia2_flask2_1:5000/site')
-	container=get('http://sfia2_flask2_1:5000/container')
-	locker=get('http://sfia2_flask2_1:5000/locker')
+	no=get('http://sfia2_number_1:5000/no')
+	site=get('http://sfia2_number_1:5000/site')
+	container=get('http://sfia2_number_1:5000/container')
+	locker=get('http://sfia2_number_1:5000/locker')
 	scp="SCP-"+str(no.text)
 	if objectclass.validate_on_submit():
 		if objectclass.objectclass.data.lower()=="safe":
 			oc="Safe"
+			sadjective=get('http://sfia2_safe_1:5000/sadjective')
+			snoun=get('http://sfia2_safe_1:5000/snoun')
+			sanomaly=get('http://sfia2_safe_1:5000/sanomaly')
+			return render_template("safe.html",oc=oc,scp=scp,site=site,locker=locker,sadjective=sadjective,snoun=snoun,sanomaly=sanomaly)
 		if objectclass.objectclass.data.lower()=="euclid":
 			oc="Euclid"
+			#eadjective=get('http://sfia2_euclid_1:5000/eadjective')
+			#enoun=get('http://sfia2_euclid_1:5000/enoun')
+			#eanomaly=get('http://sfia2_euclid_1:5000/eanomaly')
+			#return render_template("euclid.html",oc=oc,scp=scp,site=site,container=container,eadjective=eadjective,enoun=enoun,eanomaly=eanomaly)
 		if objectclass.objectclass.data.lower()=="keter":
 			oc="Keter"
+			#location=get('http://sfia2_keter_1:5000/location')
+			#kadjective=get('http://sfia2_keter_1:5000/kadjective')
+			#knoun=get('http://sfia2_keter_1:5000/knoun')
+			#kanomaly=get('http://sfia2_keter_1:5000/kanomaly')
+			#return render_template("keter.html",oc=oc,scp=scp,site=site,location=location,kadjective=kadjective,knoun=knoun,kanomaly=kanomaly)
 		if objectclass.objectclass.data.lower()=="test":
 			oc="Thaumiel"
 		return render_template("scp.html",oc=oc,scp=scp,site=site,container=container,locker=locker)
 
 	return render_template("home.html", objectclass=objectclass)
-
-#<form method='POST' action=''>
-#  {{alterego.hidden_tag()}}
-#  {{alterego.submit}}<br>
-#</form>

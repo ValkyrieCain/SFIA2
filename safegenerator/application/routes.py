@@ -4,7 +4,8 @@ from random import *
 import time
 @app.route('/sadjective')
 def sadjective():
-	return sample(list/array/csv)
+	adjective=["a green", "a round", "a metallic", "a black", "a small", "a circular", "a white"]
+	return sample(adjective,1)
 @app.route('/snoun')
 def snoun():
 	return str(randint(1,20))

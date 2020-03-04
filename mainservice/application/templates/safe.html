@@ -1,0 +1,10 @@
+{%extends "template.html"%}
+{%block extra%}
+ <h3>SCP Generator</h3>
+ <p>
+  <b>Item #:</b> {{scp}}<br>
+  <b>Object Class:</b> {{oc}}<br>
+  <b>Special Containment Procedures:</b> {{scp}} is stored in locker #{{locker.text}} at Site {{site.text}}<br>
+  <b>Description:</b> {{scp}} is {{sadjective[0]}} {{snoun.text}}.
+ </p>
+{%endblock%}

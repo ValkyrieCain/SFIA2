@@ -2,12 +2,19 @@
 {%block extra%}
  <h3>SCP Generator</h3>
  <p> generate scp lorem ipsum</p>
-  <div class='forms'>
-   <form method='POST' action=''>
-    <p>
-     {{objectclass.hidden_tag()}}
-     Object Class: {{objectclass.objectclass}}
-     {{objectclass.submit}}
+ <div class='forms'>
+  <form method='POST' action=''>
+   <p>
+    {{objectclass.hidden_tag()}}
+    Object Class: {{objectclass.objectclass}}
+    {{objectclass.submit}}
+    {%if objectclass.objectclass.errors%}
+     <div class='error'>
+      {%for error in objectclass.objectclass.errors%}
+       <span>{{error}}</span>
+      {%endfor%}
+     </div>
+    {%endif%}
    </p>
   </form>
  </div>
