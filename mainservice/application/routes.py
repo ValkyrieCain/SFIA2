@@ -10,7 +10,7 @@ def home():
 	objectclass=Objectclass()
 	no=get('http://sfia2_number_1:5000/no')
 	scp="SCP-"+str(no.text)
-	siteget=get('http://sfia2_number_1:5000/site')
+	siteget=s
 	site=siteget.text
 	containerget=get('http://sfia2_number_1:5000/container')
 	container=containerget.text
