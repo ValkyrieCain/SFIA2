@@ -9,4 +9,4 @@ pr() { docker-compose down; git pull; docker-compose up -d --build; }
 
 prt() { docker-compose down; git pull; docker-compose up --build; }
 
-sd() { docker-compose down; docker rm $(docker ps -qa); docker rmi sfia2_main; docker rmi sfia2_number; docker rmi sfia2_safe; docker rmi sfia2_euclid; docker rmi sfia2_keter; }
+sd() { docker-compose down; docker rm $(docker ps -qa); docker rmi sfia2_main; docker rmi sfia2_number; docker rmi sfia2_safe; docker rmi sfia2_euclid; docker rmi sfia2_keter; docker rmi sfia2_thaumiel; }
