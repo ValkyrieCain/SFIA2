@@ -19,7 +19,7 @@ def home():
 	redacted=get('http://sfia2_number_1:5000/redacted')
 	if objectclass.validate_on_submit():
 		if objectclass.objectclass.data.lower()=="safe":
-			if str(redacted.text)!="1":
+			if str(redacted.text)=="1":
 				oc="Safe"
 				return render_template("redacted.html",scp=scp,site=site,oc=oc)
 			else:
