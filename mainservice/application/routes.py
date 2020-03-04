@@ -16,7 +16,7 @@ def home():
 	scp="SCP-"+str(no.text)
 	if objectclass.validate_on_submit():
 		if objectclass.objectclass.data.lower()=="safe":
-			oc="Safe"
+			oc="Sddfe"
 			sadjective=get('http://sfia2_safe_1:5000/sadjective')
 			snoun=get('http://sfia2_safe_1:5000/snoun')
 			sanomaly=get('http://sfia2_safe_1:5000/sanomaly')
