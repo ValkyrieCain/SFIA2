@@ -9,7 +9,16 @@ def sadjective():
 	return choice[0]
 @app.route('/snoun')
 def snoun():
-	return str(randint(1,20))
+	noun=["rock", "spoon", "███████ brand handheld games console", "shelf", "bowl of rice"]
+	choice=sample(noun,1)
+	return choice[0]
+@app.route('/scategory')
+def scategory():
+	category=["a weird", "a mad crazy"]
+	choice=sample(category,1)
+	return choice[0]
 @app.route('/sanomaly')
 def sanomaly():
-	return randint(1,200)
+	anomaly=["being fucked up", "███████"]
+	choice=sample(anomaly,1)
+	return choice[0]
