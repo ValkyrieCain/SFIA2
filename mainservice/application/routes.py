@@ -1,6 +1,6 @@
 from flask import render_template, redirect, url_for, request, flash
 from application import app
-#from application.models import Superheroes, Users, Powers
+#from application.models import
 from application.forms import Objectclass
 import time
 from requests import *
@@ -26,8 +26,3 @@ def home():
 		return render_template("scp.html",oc=oc,scp=scp,site=site,container=container,locker=locker)
 
 	return render_template("home.html", objectclass=objectclass)
-
-#<form method='POST' action=''>
-#  {{alterego.hidden_tag()}}
-#  {{alterego.submit}}<br>
-#</form>
