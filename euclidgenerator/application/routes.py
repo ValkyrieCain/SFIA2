@@ -4,12 +4,12 @@ from random import *
 import time
 @app.route('/eadjective')
 def eadjective():
-	adjective=["1.5 meter tall", "round", "carnivorous"]
+	adjective=["a 1.5 meter tall", "a round", "a carnivorous"]
 	choice=sample(adjective,1)
 	return choice[0]
 @app.route('/enoun')
 def enoun():
-	noun=["a human of █████ descent", "███████", "a sentient bicycle", "a model train set"]
+	noun=["human of █████ descent", "███████", "sentient bicycle", "model train set"]
 	choice=sample(noun,1)
 	return choice[0]
 @app.route('/ecategory')
