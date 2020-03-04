@@ -44,6 +44,6 @@ def home():
 			#return render_template("keter.html",oc=oc,scp=scp,site=site,location=location,kadjective=kadjective,knoun=knoun,kanomaly=kanomaly)
 		if objectclass.objectclass.data.lower()=="test":
 			oc="Thaumiel"
-		return render_template("scp.html",oc=oc,scp=scp,site=site,container=container,locker=locker)
+		return render_template("scp.html",oc=oc,scp=scp,site=site,container=container,locker=locker,sadjective=sadjective)
 
 	return render_template("home.html", objectclass=objectclass)
