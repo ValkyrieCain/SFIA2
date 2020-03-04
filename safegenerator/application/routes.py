@@ -3,9 +3,9 @@ from application import app
 from random import *
 import time
 @app.route('/sadjective')
-sadjective=["a green", "a round", "a metallic", "a black", "a small", "a circular", "a white"]
 def sadjective():
-	return sample(sadjective,1)
+	adjective=["a green", "a round", "a metallic", "a black", "a small", "a circular", "a white"]
+	return sample(adjective,1)
 @app.route('/snoun')
 def snoun():
 	return str(randint(1,20))
