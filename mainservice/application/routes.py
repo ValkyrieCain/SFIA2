@@ -12,15 +12,15 @@ def home():
 	scp="SCP-"+str(no.text)
 	siteget=get('http://sfia2_number_1:5000/site')
 	site=siteget.text
-	#containerget=get('http://sfia2_number_1:5000/container')
-	#container=containerget.text
-	#lockerget=get('http://sfia2_number_1:5000/locker')
-	#locker=lockerget.text
+	containerget=get('http://sfia2_number_1:5000/container')
+	container=containerget.text
+	lockerget=get('http://sfia2_number_1:5000/locker')
+	locker=lockerget.text
 	redacted=get('http://sfia2_number_1:5000/redacted')
 	if objectclass.validate_on_submit():
-		occ=objectclass.objectclass.data.lower()
-		containerget=post('http://sfia2_number_1:5000/container',data=occ)
-		container=containerget.text
+		#occ=objectclass.objectclass.data.lower()
+		#containerget=post('http://sfia2_number_1:5000/container',data=occ)
+		#container=containerget.text
 		if objectclass.objectclass.data.lower()=="safe":
 			if str(redacted.text)=="1":
 				oc="Safe"
@@ -34,7 +34,7 @@ def home():
 				category=scategory.text
 				sanomaly=get('http://sfia2_safe_1:5000/sanomaly')
 				anomaly=sanomaly.text
-				return render_template("safe.html",scp=scp,site=site,adjective=adjective,noun=noun,category=category,anomaly=anomaly,container=container)#,locker=locker)
+				return render_template("safe.html",scp=scp,site=site,adjective=adjective,noun=noun,category=category,anomaly=anomaly,locker=locker)#,container=container)
 		if objectclass.objectclass.data.lower()=="euclid":
 			if str(redacted.text)=="1":
 				oc="Euclid"
