@@ -8,7 +8,7 @@ from requests import *
 @app.route('/home', methods=['GET','POST'])
 def home():
 	objectclass=Objectclass()
-	noget=get('http://sfia2_number_1:5000/no')
+	no=get('http://sfia2_number_1:5000/no')
 	scp="SCP-"+str(no.text)
 	siteget=get('http://sfia2_number_1:5000/site')
 	site=siteget.text
