@@ -1,0 +1,7 @@
+8e43e271be554426a77e7881c402d3c6
+stty rows 50 cols 132
+resize 50 50 (session based)
+
+docker run -d -p 5000:5000 flaskapp:latest
+pr() { docker-compose down; docker rm $(docker ps -qa); docker rmi sfia2_flask1; docker rmi sfia2_f; lask2; git pull origin master; docker-compose up -d; }
+docker-compose logs flask1
