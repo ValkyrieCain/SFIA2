@@ -34,7 +34,7 @@ def home():
 				category=scategory.text
 				sanomaly=get('http://sfia2_safe_1:5000/sanomaly')
 				anomaly=sanomaly.text
-				return render_template("safe.html",scp=scp,site=site,locker=locker,adjective=adjective,noun=noun,category=category,anomaly=anomaly)
+				return render_template("safe.html",scp=scp,site=site,adjective=adjective,noun=noun,category=category,anomaly=anomaly,container=container)#,locker=locker)
 		if objectclass.objectclass.data.lower()=="euclid":
 			if str(redacted.text)=="1":
 				oc="Euclid"
