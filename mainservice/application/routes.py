@@ -38,13 +38,13 @@ def home():
 				return render_template("redacted.html",scp=scp,site=site,oc=oc)
 			else:
 				eadjective=get('http://sfia2_euclid_1:5000/eadjective')
-				adjective=sadjective.text
+				adjective=eadjective.text
 				enoun=get('http://sfia2_euclid_1:5000/enoun')
-				noun=snoun.text
+				noun=enoun.text
 				ecategory=get('http://sfia2_euclid_1:5000/ecategory')
-				category=scategory.text
+				category=ecategory.text
 				eanomaly=get('http://sfia2_euclid_1:5000/eanomaly')
-				anomaly=sanomaly.text
+				anomaly=eanomaly.text
 				return render_template("euclid.html",scp=scp,site=site,container=container,adjective=eadjective,noun=enoun,category=category,anomaly=anomaly)
 		if objectclass.objectclass.data.lower()=="keter":
 			if str(redacted.text)=="1":
