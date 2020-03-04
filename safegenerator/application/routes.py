@@ -5,7 +5,7 @@ import time
 @app.route('/sadjective')
 def sadjective():
 	adjective=["a green", "a round", "a metallic", "a black", "a small", "a circular", "a white"]
-	return sample(adjective,1)
+	return "1"#sample(adjective,1)
 @app.route('/snoun')
 def snoun():
 	return str(randint(1,20))
