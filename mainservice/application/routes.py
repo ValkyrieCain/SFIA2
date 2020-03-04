@@ -17,10 +17,13 @@ def home():
 	if objectclass.validate_on_submit():
 		if objectclass.objectclass.data.lower()=="safe":
 			oc="Safe"
+			#return render_template("safe.html",oc=oc,scp=scp,site=site,locker=locker)
 		if objectclass.objectclass.data.lower()=="euclid":
 			oc="Euclid"
+			#return render_template("euclid.html",oc=oc,scp=scp,site=site,container=container)
 		if objectclass.objectclass.data.lower()=="keter":
 			oc="Keter"
+			#return render_template("keter.html",oc=oc,scp=scp,site=site)
 		if objectclass.objectclass.data.lower()=="test":
 			oc="Thaumiel"
 		return render_template("scp.html",oc=oc,scp=scp,site=site,container=container,locker=locker)
