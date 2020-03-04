@@ -25,9 +25,9 @@ def home():
 			#print(222)
 			#print(sadjective.text[0])
 			#print(333)
-			print(sadjective[1])
+			#print(sadjective[1])
 			print(444)
-			print(sadjective[0])
+			#print(sadjective[0])
 			#return render_template("safe.html",oc=oc,scp=scp,site=site,locker=locker,sadjective=sadjective,snoun=snoun,sanomaly=sanomaly)
 		if objectclass.objectclass.data.lower()=="euclid":
 			oc="Euclid"
