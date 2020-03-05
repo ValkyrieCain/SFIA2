@@ -10,4 +10,4 @@ def thcontain():
 	elif request.data.decode("utf-8")=="keter":
 		return str(randint(1,2))
 	else:
-		return "0"
+		return request.data.decode("utf-8")
