@@ -47,7 +47,7 @@ def home():
 				anomaly=eanomaly.text
 				return render_template("euclid.html",scp=scp,site=site,container=container,adjective=adjective,noun=noun,category=category,anomaly=anomaly)
 		if objectclass.objectclass.data.lower()=="keter":
-			if str(redacted.text)=="1":
+			if int(redacted.text)<50:
 				oc="Keter"
 				return render_template("redacted.html",scp=scp,site=site,oc=oc)
 			else:
