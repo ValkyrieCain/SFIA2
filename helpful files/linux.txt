@@ -14,3 +14,7 @@ sd() { docker-compose down; docker rm $(docker ps -qa); docker rmi sfia2_main; d
 acp() { git add .; git commit -m "05 03 20"; git push; }
 
 docker swarm join --token SWMTKN-1-5h317xz1v8ix0xrgmhrre49o8l33ok5ow6fdcnartlsrdbly9t-79x35ggcupgnnldatcc48shc2 10.128.0.4:2377
+
+pr() { git pull; flask run --host=0.0.0.0; }
+
+3230da1478dd492dbd63b2a5328b9791
