@@ -19,7 +19,7 @@ def home():
 	redacted=get('http://sfia2_number_1:5000/redacted')
 	if objectclass.validate_on_submit():
 		if objectclass.objectclass.data.lower()=="safe":
-			if str(redacted.text)=="1" or str(redacted.text)=="2" or str(redacted.text)=="3" or str(redacted.text)=="4" or str(redacted.text)=="5":
+			if int(redacted.text)==1:
 				oc="Safe"
 				return render_template("redacted.html",scp=scp,site=site,oc=oc)
 			else:
@@ -33,7 +33,7 @@ def home():
 				anomaly=sanomaly.text
 				return render_template("safe.html",scp=scp,site=site,adjective=adjective,noun=noun,category=category,anomaly=anomaly,locker=locker)
 		if objectclass.objectclass.data.lower()=="euclid":
-			if str(redacted.text)=="1":
+			if int(redacted.text)==1:
 				oc="Euclid"
 				return render_template("redacted.html",scp=scp,site=site,oc=oc)
 			else:
@@ -47,7 +47,7 @@ def home():
 				anomaly=eanomaly.text
 				return render_template("euclid.html",scp=scp,site=site,container=container,adjective=adjective,noun=noun,category=category,anomaly=anomaly)
 		if objectclass.objectclass.data.lower()=="keter":
-			if int(redacted.text)<50:
+			if int(redacted.text)==1:
 				oc="Keter"
 				return render_template("redacted.html",scp=scp,site=site,oc=oc)
 			else:
