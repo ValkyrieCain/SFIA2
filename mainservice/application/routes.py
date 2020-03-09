@@ -21,9 +21,7 @@ def home():
 		if objectclass.objectclass.data.lower()=="test":
 			oc="Thaumiel"
 			occ=objectclass.objectclass.data.lower()
-			containerget=post('http://sfia2_thaumiel_1:5000/thcontain',occ)
-			contain=containerget.text
-			return render_template("thaumiel.html",oc=oc,scp=scp,site=site,contain=contain,locker=locker)
+			return render_template("thaumiel.html",oc=oc,scp=scp,site=site,contain=(int(locker)/2))
 		#elif objectclass.objectclass.data.lower()=="safe":
 		elif int(no.text)%3==0:
 			if int(redacted.text)==1:
