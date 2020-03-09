@@ -13,11 +13,11 @@ def enoun():
 	return choice[0]
 @app.route('/ecategory')
 def ecategory():
-	category=["a weird", "a mad crazy"]
+	category=["a weird", "a mad crazy", "b", "c", "d", "e", "f", "g"]
 	choice=sample(category,1)
 	return choice[0]
 @app.route('/eanomaly')
 def eanomaly():
-	anomaly=["being weird", "███████"]
+	anomaly=["being weird", "███████", "b", "c", "d", "e", "f", "g"]
 	choice=sample(anomaly,1)
 	return choice[0]

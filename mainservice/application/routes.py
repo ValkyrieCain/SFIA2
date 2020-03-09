@@ -31,7 +31,7 @@ def home():
 				return render_template("redacted.html",scp=scp,site=site,oc=oc)
 			else:
 				sadjective=get('http://sfia2_safe_1:5000/sadjective')
-				adjective=sadjective.text
+				adjective 	=sadjective.text
 				snoun=get('http://sfia2_safe_1:5000/snoun')
 				noun=snoun.text
 				scategory=get('http://sfia2_safe_1:5000/scategory')

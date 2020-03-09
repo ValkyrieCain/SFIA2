@@ -18,11 +18,11 @@ def knoun():
 	return choice[0]
 @app.route('/kcategory')
 def kcategory():
-	category=["a weird", "a mad crazy"]
+	category=["a weird", "a mad crazy", "b", "c", "d", "e", "f", "g"]
 	choice=sample(category,1)
 	return choice[0]
 @app.route('/kanomaly')
 def kanomaly():
-	anomaly=["being weird", "███████"]
+	anomaly=["being weird", "███████", "b", "c", "d", "e", "f", "g"]
 	choice=sample(anomaly,1)
 	return choice[0]
