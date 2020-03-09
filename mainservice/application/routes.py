@@ -18,7 +18,8 @@ def home():
 	locker=lockerget.text
 	redacted=get('http://sfia2_number_1:5000/redacted')
 	if objectclass.validate_on_submit():
-		if objectclass.objectclass.data.lower()=="safe":
+		#if objectclass.objectclass.data.lower()=="safe":
+		if int(no.text)%3==0:
 			if int(redacted.text)==1:
 				oc="Safe"
 				return render_template("redacted.html",scp=scp,site=site,oc=oc)
@@ -32,7 +33,8 @@ def home():
 				sanomaly=get('http://sfia2_safe_1:5000/sanomaly')
 				anomaly=sanomaly.text
 				return render_template("safe.html",scp=scp,site=site,adjective=adjective,noun=noun,category=category,anomaly=anomaly,locker=locker)
-		if objectclass.objectclass.data.lower()=="euclid":
+		#if objectclass.objectclass.data.lower()=="euclid":
+		if int(no.text)%3==1:
 			if int(redacted.text)==1:
 				oc="Euclid"
 				return render_template("redacted.html",scp=scp,site=site,oc=oc)
@@ -46,7 +48,8 @@ def home():
 				eanomaly=get('http://sfia2_euclid_1:5000/eanomaly')
 				anomaly=eanomaly.text
 				return render_template("euclid.html",scp=scp,site=site,container=container,adjective=adjective,noun=noun,category=category,anomaly=anomaly)
-		if objectclass.objectclass.data.lower()=="keter":
+		#if objectclass.objectclass.data.lower()=="keter":
+		if int(no.text)%3==2:
 			if int(redacted.text)==1:
 				oc="Keter"
 				return render_template("redacted.html",scp=scp,site=site,oc=oc)
@@ -62,10 +65,10 @@ def home():
 				kanomaly=get('http://sfia2_keter_1:5000/kanomaly')
 				anomaly=kanomaly.text
 				return render_template("keter.html",scp=scp,site=site,location=location,adjective=adjective,noun=noun,category=category,anomaly=anomaly)
-		if objectclass.objectclass.data.lower()=="test":
-			oc="Thaumiel"
-			occ=objectclass.objectclass.data.lower()
-			containerget=post('http://sfia2_thaumiel_1:5000/thcontain',occ)
-			contain=containerget.text
-			return render_template("thaumiel.html",oc=oc,scp=scp,site=site,contain=contain,locker=locker)
+		#if objectclass.objectclass.data.lower()=="test":
+		#	oc="Thaumiel"
+		#	occ=objectclass.objectclass.data.lower()
+		#	containerget=post('http://sfia2_thaumiel_1:5000/thcontain',occ)
+		#	contain=containerget.text
+		#	return render_template("thaumiel.html",oc=oc,scp=scp,site=site,contain=contain,locker=locker)
 	return render_template("home.html", objectclass=objectclass)
