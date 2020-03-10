@@ -1,26 +1,35 @@
 from flask import render_template, redirect, url_for, request, flash
 from application import app
-#from application.models import
+from application.models import Scp
 from application.forms import Objectclass
 import time
 from requests import *
 @app.route('/scp', methods=['GET','POST'])
 def scp():
-	no=get('http://sfia2_number_1:5000/no')
+	no=Scp.query.filter(Scp.number==max(Scp.id))
 	scp="SCP-"+str(no.text)
 	return scp
 @app.route('/site', methods=['GET','POST'])
 def site():
-	siteget=get('http://sfia2_number_1:5000/site')
+	siteget=Scp.query.filter(Scp.id==max(Scp.id))
 	site="Site "+str(siteget.text)
 	return site
 @app.route('/', methods=['GET','POST'])
 @app.route('/home', methods=['GET','POST'])
 def home():
+	scpno=get('http://sfia2_number_1:5000/no')
+	scpstore=int(no.text)
+	siteno=get('http://sfia2_number_1:5000/site')
+	sitestore=int(siteget.text)
+	data=Scp(
+		number=scpstore,
+		site=sitestore)
+	db.session.add(data)
+    db.session.commit()
 	objectclass=Objectclass()
-	no=get('http://sfia2_main_1:5000/scp')
+	scpg=get('http://sfia2_main_1:5000/scp')
 	scp=no.text
-	siteget=get('http://sfia2_main_1:5000/site')
+	siteg=get('http://sfia2_main_1:5000/site')
 	site=siteget.text
 	containerget=get('http://sfia2_number_1:5000/container')
 	container=containerget.text
