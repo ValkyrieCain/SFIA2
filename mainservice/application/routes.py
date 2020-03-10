@@ -25,6 +25,7 @@ def home():
 	print(scpstore)
 	print(sitestore)
 	print(2222222222222222222222222222222222222222222222222222)
+	time.sleep 20
 	data=Scp(
 		number=scpstore,
 		site=sitestore)
