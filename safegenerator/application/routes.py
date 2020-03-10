@@ -27,6 +27,6 @@ def sanomaly():
 	site=siteget.text
 	anomaly=["causing those who look at it to percieve it as a magnifying glass.","██████████ ███████ ████████ ████",
 	"heating the air in a one meter radius around it to exactly twenty five degrees celcius", "creating a subspace bubble that absorbs all light",
-	"causes seven Foundation terminals at Site "+site+" to display an image of "+scp+" at random intervals", "e", "f", "g"]
+	"causing seven Foundation terminals at Site x to display an image of x at random intervals", "e", "f", "g"]
 	choice=sample(anomaly,1)
 	return choice[0]

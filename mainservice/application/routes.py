@@ -4,13 +4,22 @@ from application import app
 from application.forms import Objectclass
 import time
 from requests import *
+@app.route('/scp', methods=['GET','POST'])
+def scp():
+	no=get('http://sfia2_number_1:5000/no')
+	scp="SCP-"+str(no.text)
+	return scp
+@app.route('/site', methods=['GET','POST'])
+def site():
+	siteget=get('http://sfia2_number_1:5000/site')
+	site="Site "+str(siteget.text)
 @app.route('/', methods=['GET','POST'])
 @app.route('/home', methods=['GET','POST'])
 def home():
 	objectclass=Objectclass()
-	no=get('http://sfia2_number_1:5000/no')
-	scp="SCP-"+str(no.text)
-	siteget=get('http://sfia2_number_1:5000/site')
+	no=get('http://sfia2_main_1:5000/scp')
+	scp=no.text
+	siteget=get('http://sfia2_main_1:5000/site')
 	site=siteget.text
 	containerget=get('http://sfia2_number_1:5000/container')
 	container=containerget.text
@@ -21,7 +30,8 @@ def home():
 		if objectclass.objectclass.data.lower()=="test":
 			oc="Thaumiel"
 			occ=objectclass.objectclass.data.lower()
-			return render_template("thaumiel.html",oc=oc,scp=scp,site=site,contain=(int(locker)/2))
+			thaumiel=get('http://sfia2_thaumiel_1:5000/thaumiel')
+			return render_template("thaumiel.html",oc=oc,scp=scp,site=site,contain=(int(locker)/2),thaumiel=thaumiel)
 		elif objectclass.objectclass.data.lower()=="safe":
 		#elif int(no.text)%3==0:
 			if int(redacted.text)==1:
