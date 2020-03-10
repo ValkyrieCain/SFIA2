@@ -1,5 +1,5 @@
 from flask import render_template, redirect, url_for, request, flash
-from application import app
+from application import app, db
 from application.models import Scp
 from application.forms import Objectclass
 import time
