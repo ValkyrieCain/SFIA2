@@ -13,11 +13,13 @@ def snoun():
 	return choice[0]
 @app.route('/scategory')
 def scategory():
-	category=["a memetic","an antimemetic""an amorphous","an auditory","an autonomous","a biohazardous","a carnivorous","a cognitohazardous","a corrosive","a crystalline","an ectoentropic", "an electrical"]
+	category=["a memetic","a ██████████","an antimemetic""an amorphous","an auditory","an autonomous","a biohazardous","a carnivorous","a cognitohazardous","a corrosive","a crystalline","an ectoentropic", "an electrical"]
 	choice=sample(category,1)
 	return choice[0]
 @app.route('/sanomaly')
 def sanomaly():
-	anomaly=["being weird", "███████", "b", "c", "d", "e", "f", "g"]
+	anomaly=["causing those who look at it to percieve it as a magnifying glass."
+	,"██████████ ███████ ████████ ████","heating the air in a one meter radius around it to exactly twenty five degrees celcius",
+	"c", "d", "e", "f", "g"]
 	choice=sample(anomaly,1)
 	return choice[0]
