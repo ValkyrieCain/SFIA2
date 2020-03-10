@@ -21,6 +21,8 @@ def home():
 	scpstore=int(scpno.text)
 	siteno=get('http://sfia2_number_1:5000/site')
 	sitestore=int(siteno.text)
+	print(scpstore)
+	print(sitestore)
 	data=Scp(
 		number=scpstore,
 		site=sitestore)
