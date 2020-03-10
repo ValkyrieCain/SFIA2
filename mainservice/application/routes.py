@@ -2,16 +2,17 @@ from flask import render_template, redirect, url_for, request, flash
 from application import app, db
 from application.models import Scp
 from application.forms import Objectclass
+from sqlalchemy.sql.expression import func
 import time
 from requests import *
 @app.route('/scp', methods=['GET','POST'])
 def scp():
-	no=Scp.query.filter(Scp.id==max(Scp.id)).first()
+	no=Scp.query.filter(Scp.id==func.max(Scp.id)).first()
 	scp="SCP-"+str(no.number)
 	return scp
 @app.route('/site', methods=['GET','POST'])
 def site():
-	siteget=Scp.query.filter(Scp.id==max(Scp.id)).first()
+	siteget=Scp.query.filter(Scp.id==func.max(Scp.id)).first()
 	site="Site "+str(siteget.site)
 	return site
 
