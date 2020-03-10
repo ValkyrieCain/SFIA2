@@ -20,6 +20,10 @@ def scategory():
 	return choice[0]
 @app.route('/sanomaly')
 def sanomaly():
+	no=get('http://sfia2_number_1:5000/no')
+	scp="SCP-"+str(no.text)
+	siteget=get('http://sfia2_number_1:5000/site')
+	site=siteget.text
 	anomaly=["causing those who look at it to percieve it as a magnifying glass.","██████████ ███████ ████████ ████",
 	"heating the air in a one meter radius around it to exactly twenty five degrees celcius", "creating a subspace bubble that absorbs all light",
 	"causes seven Foundation terminals at Site "+site+" to display an image of "+scp+" at random intervals", "e", "f", "g"]
