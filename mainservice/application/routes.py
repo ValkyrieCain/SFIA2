@@ -6,13 +6,13 @@ import time
 from requests import *
 @app.route('/scp', methods=['GET','POST'])
 def scp():
-	no=Scp.query.filter(Scp.number==max(Scp.id))
-	scp="SCP-"+str(no.text)
+	no=Scp.query.filter(Scp.id==max(Scp.id)).first()
+	scp="SCP-"+str(no.number)
 	return scp
 @app.route('/site', methods=['GET','POST'])
 def site():
-	siteget=Scp.query.filter(Scp.id==max(Scp.id))
-	site="Site "+str(siteget.text)
+	siteget=Scp.query.filter(Scp.id==max(Scp.id)).first()
+	site="Site "+str(siteget.site)
 	return site
 @app.route('/', methods=['GET','POST'])
 @app.route('/home', methods=['GET','POST'])
