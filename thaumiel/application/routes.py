@@ -9,4 +9,4 @@ def thaumiel():
 	siteget=get('http://sfia2_main_1:5000/site')
 	site=siteget.text
 	anomaly="causes seven Foundation terminals at "+site+" to display an image of "+scp+" at random intervals"
-	return anomaly   
+	return anomaly
