@@ -1,6 +1,7 @@
 from flask import render_template, redirect, url_for, request, flash
 from application import app
 from random import *
+from requests import *
 @app.route('/sadjective')
 def sadjective():
 	adjective=["a green","a round","a metallic","a black","a small","a circular","a white","a flat","a spherical","a translucent"]
