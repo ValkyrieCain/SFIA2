@@ -13,6 +13,7 @@ def scp():
 def site():
 	siteget=get('http://sfia2_number_1:5000/site')
 	site="Site "+str(siteget.text)
+	return site
 @app.route('/', methods=['GET','POST'])
 @app.route('/home', methods=['GET','POST'])
 def home():
@@ -30,7 +31,8 @@ def home():
 		if objectclass.objectclass.data.lower()=="test":
 			oc="Thaumiel"
 			occ=objectclass.objectclass.data.lower()
-			thaumiel=get('http://sfia2_thaumiel_1:5000/thaumiel')
+			thaumielg=get('http://sfia2_thaumiel_1:5000/thaumiel')
+			thaumiel=thaumielg.text
 			return render_template("thaumiel.html",oc=oc,scp=scp,site=site,contain=(int(locker)/2),thaumiel=thaumiel)
 		elif objectclass.objectclass.data.lower()=="safe":
 		#elif int(no.text)%3==0:
