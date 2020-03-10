@@ -13,13 +13,15 @@ def snoun():
 	return choice[0]
 @app.route('/scategory')
 def scategory():
-	category=["a memetic","a ██████████","an antimemetic""an amorphous","an auditory","an autonomous","a biohazardous","a carnivorous","a cognitohazardous","a corrosive","a crystalline","an ectoentropic", "an electrical"]
+	category=["a memetic","a ██████████","an antimemetic""an amorphous","an auditory","an autonomous","a biohazardous",	"a carnivorous",
+	"a cognitohazardous","a corrosive","a crystalline","an ectoentropic","an electrical","an empathetic","an extradimensional",	"an extraterrestrial",
+	"a foundation-made","a gaseous","a geological","a hallucinatory","a humanoid","an indestructible","an intangible","a liquid"]
 	choice=sample(category,1)
 	return choice[0]
 @app.route('/sanomaly')
 def sanomaly():
-	anomaly=["causing those who look at it to percieve it as a magnifying glass."
-	,"██████████ ███████ ████████ ████","heating the air in a one meter radius around it to exactly twenty five degrees celcius",
-	"c", "d", "e", "f", "g"]
+	anomaly=["causing those who look at it to percieve it as a magnifying glass.","██████████ ███████ ████████ ████",
+	"heating the air in a one meter radius around it to exactly twenty five degrees celcius", "creating a subspace bubble that absorbs all light",
+	"causes seven Foundation terminals at Site "+site+" to display an image of "+scp+" at random intervals", "e", "f", "g"]
 	choice=sample(anomaly,1)
 	return choice[0]
