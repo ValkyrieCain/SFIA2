@@ -32,7 +32,7 @@ def home():
 	scpg=get('http://sfia2_main_1:5000/scp')
 	scp=scpg.text
 	siteg=get('http://sfia2_main_1:5000/site')
-	site=siteget.text
+	site=siteg.text
 	containerget=get('http://sfia2_number_1:5000/container')
 	container=containerget.text
 	lockerget=get('http://sfia2_number_1:5000/locker')
