@@ -18,9 +18,9 @@ def site():
 @app.route('/home', methods=['GET','POST'])
 def home():
 	scpno=get('http://sfia2_number_1:5000/no')
-	scpstore=int(scpno.text)
+	scpstore=1#int(scpno.text)
 	siteno=get('http://sfia2_number_1:5000/site')
-	sitestore=int(siteno.text)
+	sitestore=1#int(siteno.text)
 	print(1111111111111111111111111111111111111111111111111111)
 	print(scpstore)
 	print(sitestore)
