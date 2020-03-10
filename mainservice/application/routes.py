@@ -25,7 +25,7 @@ def home():
 		number=scpstore,
 		site=sitestore)
 	db.session.add(data)
-    db.session.commit()
+	db.session.commit()
 	objectclass=Objectclass()
 	scpg=get('http://sfia2_main_1:5000/scp')
 	scp=no.text
