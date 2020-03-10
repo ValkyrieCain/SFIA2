@@ -13,7 +13,7 @@ def snoun():
 	return choice[0]
 @app.route('/scategory')
 def scategory():
-	category=["a weird", "a mad crazy", "b", "c", "d", "e", "f", "g"]
+	category=["a memetic","an antimemetic""an amorphous","an auditory","an autonomous","a biohazardous","a carnivorous","a cognitohazardous","a corrosive","a crystalline","an ectoentropic", "an electrical"]
 	choice=sample(category,1)
 	return choice[0]
 @app.route('/sanomaly')
