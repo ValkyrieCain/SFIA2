@@ -15,7 +15,7 @@ def site():
 	site="Site "+str(siteget.site)
 	return site
 
-	
+
 @app.route('/', methods=['GET','POST'])
 @app.route('/home', methods=['GET','POST'])
 def home():
@@ -30,7 +30,7 @@ def home():
 
 	objectclass=Objectclass()
 	scpg=get('http://sfia2_main_1:5000/scp')
-	scp=no.text
+	scp=spcg.text
 	siteg=get('http://sfia2_main_1:5000/site')
 	site=siteget.text
 	containerget=get('http://sfia2_number_1:5000/container')
