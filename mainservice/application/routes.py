@@ -22,8 +22,8 @@ def home():
 			oc="Thaumiel"
 			occ=objectclass.objectclass.data.lower()
 			return render_template("thaumiel.html",oc=oc,scp=scp,site=site,contain=(int(locker)/2))
-		#elif objectclass.objectclass.data.lower()=="safe":
-		elif int(no.text)%3==0:
+		elif objectclass.objectclass.data.lower()=="safe":
+		#elif int(no.text)%3==0:
 			if int(redacted.text)==1:
 				oc="Safe"
 				return render_template("redacted.html",scp=scp,site=site,oc=oc)
@@ -37,8 +37,8 @@ def home():
 				sanomaly=get('http://sfia2_safe_1:5000/sanomaly')
 				anomaly=sanomaly.text
 				return render_template("safe.html",scp=scp,site=site,adjective=adjective,noun=noun,category=category,anomaly=anomaly,locker=locker)
-		#elif objectclass.objectclass.data.lower()=="euclid":
-		elif int(no.text)%3==1:
+		elif objectclass.objectclass.data.lower()=="euclid":
+		#elif int(no.text)%3==1:
 			if int(redacted.text)==1:
 				oc="Euclid"
 				return render_template("redacted.html",scp=scp,site=site,oc=oc)
@@ -52,8 +52,8 @@ def home():
 				eanomaly=get('http://sfia2_euclid_1:5000/eanomaly')
 				anomaly=eanomaly.text
 				return render_template("euclid.html",scp=scp,site=site,container=container,adjective=adjective,noun=noun,category=category,anomaly=anomaly)
-		#elif objectclass.objectclass.data.lower()=="keter":
-		elif int(no.text)%3==2:
+		elif objectclass.objectclass.data.lower()=="keter":
+		#elif int(no.text)%3==2:
 			if int(redacted.text)==1:
 				oc="Keter"
 				return render_template("redacted.html",scp=scp,site=site,oc=oc)

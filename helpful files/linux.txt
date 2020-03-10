@@ -10,7 +10,7 @@ prt() { docker-compose down; git pull; docker-compose up --build; }
 
 sd() { docker-compose down; docker rm $(docker ps -qa); docker rmi sfia2_main; docker rmi sfia2_number; docker rmi sfia2_safe; docker rmi sfia2_euclid; docker rmi sfia2_keter; docker rmi sfia2_thaumiel; }
 
-acp() { git add .; git commit -m "06 03 20"; git push; }
+acp() { git add .; git commit -m "10 03 20"; git push; }
 
 docker swarm join --token SWMTKN-1-5h317xz1v8ix0xrgmhrre49o8l33ok5ow6fdcnartlsrdbly9t-79x35ggcupgnnldatcc48shc2 10.128.0.4:2377
 
