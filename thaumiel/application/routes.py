@@ -2,7 +2,7 @@ from flask import render_template, redirect, url_for, request, flash
 from application import app
 from random import *
 from requests import *
-@app.route('/thaumiel')
+@app.route('/thaumiel', methods=['GET','POST'])
 def thaumiel():
 	no=get('http://sfia2_main_1:5000/scp')
 	scp=no.text
