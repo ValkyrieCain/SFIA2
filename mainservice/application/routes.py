@@ -18,17 +18,10 @@ def site():
 @app.route('/home', methods=['GET','POST'])
 def home():
 	scpno=get('http://sfia2_number_1:5000/no')
-	scpstore=1#int(scpno.text)
+	scpstore=int(scpno.text)
 	siteno=get('http://sfia2_number_1:5000/site')
-	sitestore=1#int(siteno.text)
-	print(1111111111111111111111111111111111111111111111111111)
-	print(scpstore)
-	print(sitestore)
-	print(2222222222222222222222222222222222222222222222222222)
-	time.sleep(20)
-	data=Scp(
-		number=scpstore,
-		site=sitestore)
+	sitestore=int(siteno.text)
+	data=Scp(number=scpstore, site=sitestore)
 	db.session.add(data)
 	db.session.commit()
 	objectclass=Objectclass()
