@@ -14,6 +14,8 @@ def site():
 	siteget=Scp.query.filter(Scp.id==max(Scp.id)).first()
 	site="Site "+str(siteget.site)
 	return site
+
+	
 @app.route('/', methods=['GET','POST'])
 @app.route('/home', methods=['GET','POST'])
 def home():
@@ -24,6 +26,8 @@ def home():
 	data=Scp(number=scpstore, site=sitestore)
 	db.session.add(data)
 	db.session.commit()
+
+
 	objectclass=Objectclass()
 	scpg=get('http://sfia2_main_1:5000/scp')
 	scp=no.text
