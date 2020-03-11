@@ -1,3 +1,3 @@
 from application import db
-db.drop_all()
+db.drop(Scp)
 db.create_all()
