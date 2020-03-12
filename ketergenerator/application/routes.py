@@ -29,6 +29,6 @@ def kcategory():
 	return choice[0]
 @app.route('/kanomaly')
 def kanomaly():
-	anomaly=[""""""]
+	anomaly=["","","""" """]
 	choice=sample(anomaly,1)
 	return choice[0]
