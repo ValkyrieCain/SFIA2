@@ -4,19 +4,20 @@ from random import *
 from requests import *
 @app.route('/sadjective')
 def sadjective():
-	adjective=["a green","a round","a metallic","a black","a small","a circular","a minature","a white","a flat","a spherical","a translucent","a wooden","a crystalline"]
+	adjective=["a green","a round","a metallic","a black","a small","a circular","a minature","a white","a flat","a spherical","a translucent","a wooden",
+	"a crystalline","a magnetic"]
 	choice=sample(adjective,1)
 	return choice[0]
 @app.route('/snoun')
 def snoun():
-	noun=["rock", "spoon", "███████ brand handheld games console", "shelf", "bowl of rice"]
+	noun=["rock", "spoon", "███████ brand handheld games console", "shelf", "bowl of rice","cheese grater","piece of tofu",""]
 	choice=sample(noun,1)
 	return choice[0]
 @app.route('/scategory')
 def scategory():
 	category=["a memetic","a ██████████","an antimemetic""an amorphous","an auditory","an autonomous","a biohazardous","a carnivorous",
 	"a cognitohazardous","a corrosive","an ectoentropic","an electrical","an empathetic","an extradimensional", "an extraterrestrial",
-	"a foundation-made","a gaseous","a geological","a hallucinatory","a humanoid","an indestructible","an intangible","a liquid","a magnetic",
+	"a foundation-made","a gaseous","a geological","a hallucinatory","a humanoid","an indestructible","an intangible","a liquid",
 	"a mechanical","a metamorphic","a microscopic","a mind-affecting","a neurological","an observational","an omnivorous","an organic",
 	"an onotokinetic","a paradoxical","a parasitic","a photographic","a polyhedral","a predatory","a predictive","a radioactive","a reanimated",
 	"a sapient","a self-repairing","a self-replicating","a sentient","a skeletal","a subterrenean","a telekinetic","a telepathic","a temporal",
