@@ -15,7 +15,7 @@ def snoun():
 	return choice[0]
 @app.route('/scategory')
 def scategory():
-	category=["a memetic","a ██████████","an antimemetic""an amorphous","an auditory","an autonomous","a biohazardous","a carnivorous",
+	category=["a memetic","a ██████████","an antimemetic""an amorphous","an auditory","an autonomous","a biohazardous",
 	"a cognitohazardous","a corrosive","an ectoentropic","an electrical","an empathetic","an extradimensional", "an extraterrestrial",
 	"a foundation-made","a gaseous","a geological","a hallucinatory","a humanoid","an indestructible","an intangible","a liquid",
 	"a mechanical","a metamorphic","a microscopic","a mind-affecting","a neurological","an observational","an omnivorous","an organic",
