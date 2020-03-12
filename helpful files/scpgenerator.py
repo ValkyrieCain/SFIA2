@@ -23,7 +23,7 @@ safeadjectivelist=["green", "round", "metallic", "black", "small", "circular", "
 sal=sample(safeadjectivelist, 1)
 euclidadjectivelist=["1.5 meter tall", "round", "carnivorous"]
 eal=sample(euclidadjectivelist, 1)
-keteradjectivelist=["400 meters squared wide", "bright white"]
+keteradjectivelist=["400 meters wide", "bright white"]
 kal=sample(keteradjectivelist, 1)
 safenounlist=["rock", "spoon", "███████ brand handheld games console", "shelf", "bowl of rice"]
 snl=sample(safenounlist, 1)
@@ -39,22 +39,25 @@ if oc=="s":
 	print("Special Containment Procedures: SCP-"+scpno+" is to be held in storage locker #"+
 		lockerno+" at Site "+siteno+".")
 	print("Description: SCP-"+scpno+" is a "+sal[0]+" "+snl[0]+". It is "+
-		acl[0]+" object that has the anomalous property of ____")
+		acl[0]+" object that has the anomalous property of ███████████ ████████████████ █████████")
 if oc=="e":
 	print("Item #: SCP-"+scpno)
 	print("Object Class: Euclid")
 	print("Special Containment Procedures: SCP-"+scpno+" is to be held in a "+
 		containersize+"m by "+containersize+"m by "+containersize+"m containment chamber at Site "+siteno+".")
 	print("Description: SCP-"+scpno+" is a "+eal[0]+" "+enl[0]+". It is "+
-		acl[0]+" object that has the anomalous property of ____")
+		acl[0]+" object that has the anomalous property of ███████████ ████████████████ █████████")
 if oc=="k":
 	print("Item #: SCP-"+scpno)
 	print("Object Class: Keter")
 	print("Special Containment Procedures: SCP-"+scpno+" is contained on location in █████████, "+
 		ll[0]+". Site "+siteno+" has been built around it.")
 	print("Description: SCP-"+scpno+" is a "+kal[0]+" "+knl[0]+". It is "+
-		acl[0]+" object that has the anomalous property of ____")
+		acl[0]+" object that has the anomalous property of ███████████ ████████████████ █████████")
 if oc=="spelling":
 	print("Object Class incorrectly inputted. Please try again.")
 if oc=="t":
-	oc="t"
+	print("Item #: SCP-"+scpno)
+	print("Object Class: Thaumiel")
+	print("Special Containment Procedures: SCP-"+scpno+" is stored at Site "+siteno+".")
+	print("Description: SCP-"+scpno+" is not anomalous.")

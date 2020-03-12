@@ -24,6 +24,6 @@ def ecategory():
 	return choice[0]
 @app.route('/eanomaly')
 def eanomaly():
-	anomaly=["being weird", "███████", "b", "c", "d", "e", "f", "g"]
+	anomaly=["being constantly engulfed in flames"]
 	choice=sample(anomaly,1)
 	return choice[0]

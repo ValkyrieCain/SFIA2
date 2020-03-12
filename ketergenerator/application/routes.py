@@ -29,6 +29,6 @@ def kcategory():
 	return choice[0]
 @app.route('/kanomaly')
 def kanomaly():
-	anomaly=["","","""" """]
+	anomaly=["causing anyone who goes within 15 meters of it to vanish into an extradimensional space"]
 	choice=sample(anomaly,1)
 	return choice[0]
